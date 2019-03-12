@@ -1,0 +1,152 @@
+<html>
+<head>
+<script>
+function form1()
+{
+var name=document.getElementsById("name").value;
+var age=document.getElementsById("age").value;
+var gender=document.getElementsById("gender").value;
+var address=document.getElementsById("ad").value;
+var e=document.getElementsById("state");
+var struser=e.options[e.selectedIndex].value;
+var no=document.getElementsById("phone").value;
+var x=document.getElementsById("e").value;
+if(name=="")
+{
+alert("name field is empty");
+return false;
+}
+else
+{
+	for(i=0;i<name.length;i++)
+	if(!(name.charAt(i)>='a'&&name.charAt(i)<='z')||(name.charAt(i)>='A')&&(name.charAt(i)<='Z'))
+	{
+	  alert("enter the alphabets in name field");
+	  return false;
+	}
+}
+if(name.length<5)
+{
+	alert("user name should be greater than 5");
+	 return false;
+}
+if(age=="")
+{
+	alert("age field is empty");
+	return false;
+}
+if(age<1||age>120)
+{
+	alert("give proper valid age");
+	return false;
+}
+else
+{
+	for(i=0;i<age.length;i++)
+	if(!(age.charAt(i)>='0'&&age.charAt(i)<='9')
+	{
+	  alert("enter the alphabets in name field");
+	  return false;
+	}
+}
+if(gender[0].checked==false||gender[1].checked==false)
+{
+	alert("select any male or female");
+	return false;
+}
+if(address=="")
+{
+	alert("address field is empty");
+	return false;
+}
+if(struser==0)
+{
+	alert(" please select your state");
+	return false;
+}
+if(no=="")
+{
+	alert("number field is empty");
+	return false;
+}
+if(no.length>10||no.length<10)
+{
+	alert("give proper phone number");
+	return false;
+}
+else
+{
+	for(i=0;i<no.length;i++)
+	if(!(no.charAt(i)>='0'&&no.charAt(i)<='9')
+	{
+	  alert("enter the numbers in phone field");
+	  return false;
+	}
+}
+if(x=="")
+{
+	alert("email field is empty");
+	return false;
+}
+else
+{
+	var atpos=x.indexOf("@");
+	var dotpos=x.lastIndexOf(".")
+	if(atpos<1||dot<atpos+2||dotpos+2>=x.length)
+	{
+		alert("not a valid email address");
+		return false;
+	}
+}
+}
+
+</script>
+</head>
+<body>
+<center><h1>REGISTRATION FORM</h1>
+<table border="0" bgcolor="green" width=80% height=80%>
+<form name="regform" action="p1.html" method="post" onSubmit="form1">
+<tr>
+<td height="28" align="right">NAME :&nbsp;</td>
+<td height="28"><input type="text id="name" size="25"></td>
+</tr>
+<tr>
+<td height="28" align="right">AGE :&nbsp;</td>
+<td height="28"><input type="text id="age" size="25"></td>
+</tr>
+<tr>
+<td height="28" align="right">GENDER :&nbsp;</td>
+<td height="28"><input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="Female"> FeMale</td>
+</tr>
+<tr>
+<td height="28" align="right">ADDRESS :&nbsp;</td>
+<td ><textarea rows="10" cols="70" id="ad"></textarea></td>
+</tr>
+<tr>
+<td height="28" align="right">STATE :&nbsp;</td>
+<td height="28">
+<select id="state">
+<option value="0">select</option>
+<option value="1">AP</option>
+<option value="2">TS</option>
+<option value="3">TN</option>
+</select>
+</td>
+</tr>
+<tr>
+<td height="28" align="right">MOBILE NUMBER:&nbsp;</td>
+<td height="28"><input type="text" id="phone" size="25"></td>
+</tr>
+<tr>
+<td height="28" align="right">EMAIL ID :&nbsp;</td>
+<td height="28"><input type="text" id="e" size="25"></td>
+</tr>
+<tr>
+<td height="28" align="right"></td>
+<td height="28"><input type="submit"  value="submit " name="signup"></td>
+</tr>
+</form>
+</table>
+</body>
+</html>
