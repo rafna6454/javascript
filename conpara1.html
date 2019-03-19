@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+function f1(name,location,establish)
+{
+	this.name=name;
+	this.location=location;
+	this.establish=establish;
+	this.fun1=function()
+	{
+		document.write(this.name+" was established in"+this.establish+" at" +this.location+"<br>")
+	}	
+}
+	var school= new f1("narayana","vijayawda","1990");
+	school.fun1();
+</script>
+</head>
