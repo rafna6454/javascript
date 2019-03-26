@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> ABC </title>
+<script>
+function validateForm()
+{
+var x="";
+var name=document.RegForm.firstName.value;
+if (name=="")
+{
+alert("Enter your first Name");
+x+="Please enter your first name.";
+document.getElementById("error").innerHTML=x;
+return false;
+}
+else
+{
+alert("Thank You");
+return true;
+}
+}
+</script>
+
+</head>
+
+<body>
+<form name="RegForm" method="post" onsubmit="return validateForm();">
+FIrst Name : <input type="text" name="firstName" id="firstName" size="30">
+<input type="submit" name="submit" value="Click">
+<div name="error" id="error"> </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script type="text/javascript">
+	function displayinfo(name,location,established)
+	{
+	 
+	this.name=name;
+	this.location=location;
+	this.established=established;
+
+	this.displayinfo=function() {
+		document.write(this.name+ " was established in "+this.established+" at " + this.location+'<br>')
+	}
+	}
+
+	var school=new displayinfo("city school","delhi",1995);
+	school.displayinfo();
+	</script>
